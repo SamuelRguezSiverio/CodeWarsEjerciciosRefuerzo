@@ -146,3 +146,35 @@ function isPowerOfTwo(n) {
 console.log(isPowerOfTwo(0))
 console.log(isPowerOfTwo(1024))
 console.log(isPowerOfTwo(333))
+
+/*
+
+5. All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+
+    *** MY PATH ***
+
+    5.1 Siguiendo la regla del ejercicio identificamos en un string como extraer la primera y última letra de todo su contenido.
+    5.2 Para identificar la primera letra usamos string[0] y para la última string.length -1
+    5.3 Realizamos un condicional if() para igualar las iniciales del nombre de cada animal junto con las últimas letras de sus respectivos platos de comida.
+    5.4 Si ocurre la condición, regresamos true
+    5.5 Si no ocurre, entonces false.
+
+    *** MY PATH ***
+
+*/
+
+function feast(beast, dish) {
+    if (beast[0] == dish[0] && beast[beast.length - 1] == dish[dish.length - 1]) {
+      return true
+    }
+    else {
+      return false
+    }
+  }
+
+console.log(feast('Great Blue Heron', 'Garlic Naan'))
+console.log(feast('Chickadee', 'Chocolate Cake'))
