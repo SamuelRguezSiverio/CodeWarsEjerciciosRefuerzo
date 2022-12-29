@@ -102,3 +102,47 @@ function digits(n) {
 console.log(digits(5))
 console.log(digits(12354))
 console.log(digits(9346561233))
+
+/*
+
+4. Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two. From the corresponding Wikipedia entry:
+
+    "a power of two is a number of the form 2n where n is an integer, i.e. the result of exponentiation with number two as the base and integer n as the exponent."
+
+You may assume the input is always valid.
+
+Examples:
+
+    isPowerOfTwo(1024) // -> true
+    isPowerOfTwo(4096) // -> true
+    isPowerOfTwo(333)  // -> false
+
+Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
+
+    *** MY PATH ***
+
+    4.1 Accediendo a este link https://oeis.org/A000079 comprobamos cuales son los valores de Power of 2:
+
+        Powers of 2: a(n) = 2^n.
+        
+        1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152, 4194304, 8388608, 16777216, 33554432, 67108864, 134217728, 268435456, 536870912, 1073741824, 2147483648, 4294967296, 8589934592
+    4.2 Generamos una condición en la que ya sabemos que si el valor de "n" es 0 el resultado es falso.
+    4.3 Utilizamos un bucle while() para determinar que todas las operaciones resultantes de hayar el cociente de 2 y cuyo resultado sea igual a 0 sean posibles para determinar que el valor sea true.
+
+    *** MY PATH ***
+
+*/
+
+function isPowerOfTwo(n) {
+    if (n === 0) {
+        return false
+    }
+    while (n % 2 === 0) {
+        n = n / 2
+    }
+    return n === 1
+}
+
+console.log(isPowerOfTwo(0))
+console.log(isPowerOfTwo(1024))
+console.log(isPowerOfTwo(333))
