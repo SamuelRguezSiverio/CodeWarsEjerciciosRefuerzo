@@ -75,3 +75,30 @@ console.log(remainder(17, 5))
 console.log(remainder(13, 72))
 console.log(remainder(0, -1))
 console.log(remainder(0, 1))
+
+/*
+
+3. Determine the total number of digits in the integer (n>=0) given as input to the function. For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
+
+All inputs will be valid.
+
+    *** MY PATH ***
+
+    3.1 Convertir el parámetro n en string usando .toString().
+    3.2 Utilizar método .length del parámetor n para determinar cuantos dígitos tiene.
+    3.3 Devolver el resultado en formato número usando parseInt()
+    3.4 Englobar todo en un condicional if para que n sea mayor o igual que 0 y se cumpla la función según la indicación del ejercicio.
+
+    *** MY PATH ***
+
+*/
+
+function digits(n) {
+    if (n >= 0) {
+        return parseInt(n.toString().length)
+    }
+} 
+
+console.log(digits(5))
+console.log(digits(12354))
+console.log(digits(9346561233))
